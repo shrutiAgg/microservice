@@ -8,6 +8,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +17,7 @@ import com.springframework.microservice.data.jpa.model.Ticket;
 import com.springframework.microservice.data.jpa.repository.TicketRepository;
 
 public class TicketControllerTest {
+	
 	
 	@InjectMocks
 	TicketController controller;
@@ -44,7 +46,7 @@ public class TicketControllerTest {
     }
     
     @Test
-    public void AddTicketsTest()
+    public void addTicketsTest()
     {
     	Ticket ticket = new Ticket(1,30,"Available","4B");
     	controller.updateTickets(ticket);
@@ -52,7 +54,7 @@ public class TicketControllerTest {
     }
     
     @Test
-    public void BookTicketsSuccessTest()
+    public void bookTicketsSuccessTest()
     {
         Ticket ticket = new Ticket(1,40, "Available", "3A");
     	List<Ticket> lst=new ArrayList<Ticket>();
@@ -63,7 +65,7 @@ public class TicketControllerTest {
     }
     
     @Test
-    public void BookTicketsFailureTest()
+    public void bookTicketsFailureTest()
     {
         Ticket ticket = new Ticket(1,40, "Booked", "3A");
     	List<Ticket> lst=new ArrayList<Ticket>();

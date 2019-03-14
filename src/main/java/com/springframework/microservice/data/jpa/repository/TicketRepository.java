@@ -8,6 +8,14 @@ import org.springframework.stereotype.Repository;
 
 import com.springframework.microservice.data.jpa.model.Ticket;
 
+/**
+* The TicketRepository is Repository class that will connect to database to
+* get ticket data
+*
+* @author  Shruti 
+* @version 1.0
+* @since   03-14-2019 
+*/
 @Repository("TicketRepository")
 public interface  TicketRepository extends JpaRepository<Ticket, Long> {
 	
